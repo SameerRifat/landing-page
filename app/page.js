@@ -1,5 +1,3 @@
-// import styles from "./page.module.css";
-
 import CompanyLogos from "@/components/company-logos";
 import Hero from "@/components/hero";
 import InfoSection from "@/components/info-section";
