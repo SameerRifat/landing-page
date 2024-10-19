@@ -1,8 +1,8 @@
-import CompanyLogos from "@/components/company-logos";
 import Hero from "@/components/hero";
 import InfoSection from "@/components/info-section";
-import InnovatingSection from "@/components/innovating-section";
 import WelcomeMessage from "@/components/welcome-message";
+import CompanyLogos from "@/components/company-logos";
+import MilestonesSection from "@/components/milestones-section";
 import LatestNews from "@/components/latest-news";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
       <InfoSection />
       <WelcomeMessage />
       <CompanyLogos />
-      <InnovatingSection />
+      <MilestonesSection />
       <LatestNews />
     </main>
   );

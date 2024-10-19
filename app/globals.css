@@ -81,9 +81,16 @@ button.text-white.bg-transparent:hover {
   font-size: 14px;
 }
 
+.year{
+  font-size: 2rem;
+}
+
 @media (min-width: 768px) {
   .responsive-paragraph {
     font-size: 1.1rem;
+  }
+  .year{
+    font-size: 2.5rem;
   }
 }
 
