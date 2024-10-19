@@ -39,7 +39,7 @@ const CompanyLogos = () => {
     };
     return (
         <Container
-            className="py-5 bg-white"
+            className="py-5"
         >
             <div
                 className="row justify-content-center"

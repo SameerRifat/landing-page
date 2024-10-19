@@ -16,7 +16,7 @@ const StatItem = ({ icon, number, text }) => (
       style={{ height: 'auto' }}
     />
     <div>
-      <h2 className="display-4 fw-bold text-dark responsive-stat-item" style={{fontFamily: 'var(--font-dm-serif-text)'}}>{number}</h2>
+      <h2 className="display-4 fw-bold responsive-stat-item" style={{fontFamily: 'var(--font-dm-serif-text)'}}>{number}</h2>
       <h5 className="">{text.split('\n').map((line, i) => <React.Fragment key={i}>{line}<br /></React.Fragment>)}</h5>
     </div>
   </Col>
@@ -31,7 +31,7 @@ const InfoSection = () => {
 
   return (
     <Container
-      className="py-5 bg-white"
+      className="py-5"
     >
       <Row className="justify-content-center mb-5 mx-0">
         <Col xs={12} sm={8}>
