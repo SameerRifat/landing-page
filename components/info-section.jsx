@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Image from 'next/image';
@@ -5,7 +7,7 @@ import SectionHeading from './section-heading';
 import SectionHeadingSmall from './section-heading-small';
 
 const StatItem = ({ icon, number, text }) => (
-  <Col xs={12} sm={6} lg={4} className='d-flex align-items-center gap-4'>
+  <Col xs={6} lg={4} className='d-flex align-items-center stat-item'>
     <Image
       src={`/${icon}-icon.png`}
       alt={text}
@@ -14,10 +16,11 @@ const StatItem = ({ icon, number, text }) => (
       quality={100}
       priority
       style={{ height: 'auto' }}
+      className="responsive-image"
     />
     <div>
-      <h2 className="display-4 fw-bold responsive-stat-item" style={{fontFamily: 'var(--font-dm-serif-text)'}}>{number}</h2>
-      <h5 className="">{text.split('\n').map((line, i) => <React.Fragment key={i}>{line}<br /></React.Fragment>)}</h5>
+      <h2 className="display-4 fw-bold responsive-stat-item" style={{ fontFamily: 'var(--font-dm-serif-text)', color: '#0c2646' }}>{number}</h2>
+      <h5 className="responsive-stat-text fw-medium">{text.split('\n').map((line, i) => <React.Fragment key={i}>{line}<br /></React.Fragment>)}</h5>
     </div>
   </Col>
 );
@@ -30,9 +33,7 @@ const InfoSection = () => {
   ];
 
   return (
-    <Container
-      className="py-5"
-    >
+    <Container className="py-5">
       <Row className="justify-content-center mb-5 mx-0">
         <Col xs={12} sm={8}>
           <div>
@@ -49,16 +50,25 @@ const InfoSection = () => {
         <Col xs={12} sm={4} className="d-flex justify-content-center align-items-center">
           <div className='d-flex flex-column justify-content-center align-items-center'>
             <SectionHeadingSmall text="SINCE" className="text-center" />
-            <SectionHeading text="2015" className="display-4" style={{ marginTop: '-20px', fontSize: '4rem', fontFamily: 'var(--font-dm-serif-text)' }} />
+            <SectionHeading text="2015" className="display-4 responsive-year" style={{ marginTop: '-10px', fontFamily: 'var(--font-dm-serif-text)' }} />
           </div>
         </Col>
       </Row>
 
-      <Row className="w-100 mx-0">
+      <Row className="w-100 mx-0 g-5">
         {stats.map((stat, index) => (
           <StatItem key={index} {...stat} />
         ))}
       </Row>
+
+      <style jsx global>{`
+        @media (max-width: 768px) {
+          .responsive-image {
+            width: 70px !important;
+            height: auto !important;
+          }
+        }
+      `}</style>
     </Container>
   );
 };
