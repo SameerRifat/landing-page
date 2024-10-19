@@ -40,3 +40,64 @@ a {
     color-scheme: dark;
   }
 }
+
+
+.vh-100 {
+  height: 100vh;
+}
+
+/* hover effect for tabs */
+button.text-white.bg-transparent:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.custom-margin {
+  margin-top: 6rem;
+}
+
+@media (max-width: 576px) {
+  .custom-tab-button {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 577px) {
+  .custom-tab-button {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
+}
+
+.responsive-paragraph {
+  font-size: 1rem;
+  font-family: var(--font-montserrat);
+}
+.responsive-stat-item {
+  font-size: 3rem;
+}
+.responsive-nav-link {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .responsive-paragraph {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .responsive-paragraph {
+    font-size: 1.15rem;
+  }
+  .responsive-stat-item {
+    font-size: 4rem;
+  }
+  .responsive-nav-link {
+    font-size: 16px;
+  }
+
+  .custom-margin {
+    margin-top: 12rem;
+  }
+}
